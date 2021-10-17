@@ -18,6 +18,7 @@ RUN set -eux; \
         gcc \
         make \
         musl-dev \
+        ssl_client \
     ; \
     mkdir -p "${HOME}/src"; \
     cd "${HOME}/src"; \
