@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:edge
 MAINTAINER RekGRpth
 ENTRYPOINT [ "docker_entrypoint.sh" ]
 ADD bin /usr/local/bin

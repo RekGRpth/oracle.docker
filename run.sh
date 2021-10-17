@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
-docker pull ghcr.io/rekgrpth/oracle.docker
+docker pull ghcr.io/rekgrpth/oracle.docker:edge
 docker network create --attachable --opt com.docker.network.bridge.name=docker docker || echo $?
 docker volume create oracle
 docker stop oracle || echo $?
@@ -17,4 +17,4 @@ docker run \
     --network name=docker \
     --rm \
     --tty \
-    ghcr.io/rekgrpth/oracle.docker su-exec oracle:oracle sqlplus
+    ghcr.io/rekgrpth/oracle.docker:edge su-exec oracle:oracle sqlplus
